@@ -3,3 +3,16 @@
 .done {
     text-decoration: line-through;
 }
+
+
+li button {
+    display: none;
+}
+
+li:hover button {
+    display: inline-block;
+}
+
+button:hover::after {
+    content: "     Delete ME!";
+}
