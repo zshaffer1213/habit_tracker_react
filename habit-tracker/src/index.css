@@ -13,6 +13,6 @@ li:hover button {
     display: inline-block;
 }
 
-button:hover::after {
+li button:hover::after {
     content: "     Delete ME!";
 }

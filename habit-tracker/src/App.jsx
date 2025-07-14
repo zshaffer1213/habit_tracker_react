@@ -23,16 +23,23 @@ export default function App() {
   }
 
   function toggleComplete(id) {
-    setHabits(habits.map(habit => {
-      if (habit.id === id) {
+    setHabits(habits.map(prevHabit => {
+      if (prevHabit.id === id) {
         return ({
-          ...habit,
-          isComplete: !habit.isComplete
+          ...prevHabit,
+          isComplete: !prevHabit.isComplete
         })
       } else {
-        return habit
+        return prevHabit
       }
     }))
+  }
+
+  function resetAll(toValue = false) {
+    setHabits(habits.map(prevHabit => ({
+      ...prevHabit,
+      isComplete: toValue
+    })))
   }
 
   function removeHabit(id) {
@@ -60,6 +67,7 @@ export default function App() {
             />
           )}
         </ul>
+        {habits.length > 1 && <button onClick={() => resetAll(false)}>Reset All</button>}
     </>
   )
 
