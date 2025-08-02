@@ -2,17 +2,46 @@
 
 .done {
     text-decoration: line-through;
+    opacity: 0.8;
+    color: forestgreen;
 }
 
 
 li button {
     display: none;
+    position: relative;
+    margin-left: 1rem;
+    transition: all 1.5s;
 }
 
 li:hover button {
     display: inline-block;
 }
 
+li button:hover {
+    transform: scale(2);
+
+}
+
 li button:hover::after {
-    content: "     Delete ME!";
+    content: "    Hug ME!";
+
+}
+
+li {
+    list-style: none;  
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.reset-btn:hover {
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid red;
+    background-color: rebeccapurple;
+    color:white;
+    font-weight: 700;
+    border-radius: 6px;
 }

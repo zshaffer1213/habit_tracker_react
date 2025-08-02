@@ -67,7 +67,7 @@ export default function App() {
             />
           )}
         </ul>
-        {habits.length > 1 && <button onClick={() => resetAll(false)}>Reset All</button>}
+        {habits.length > 1 && <button className="reset-btn" onClick={() => resetAll(false)}>Reset All</button>}
     </>
   )
 
